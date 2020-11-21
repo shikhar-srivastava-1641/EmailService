@@ -1,0 +1,1 @@
+/usr/local/python3/bin/python3.6 manage.py test api.tests.v2.test_thor_reprice --settings='api.settings.integration_test_settings'

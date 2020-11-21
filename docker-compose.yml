@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  email_service: &emailservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - "PYTHONUNBUFFERED=1"
+    env_file:
+      - ./EmailService/config/production.env
+    volumes:
+      - .:/EmailService
+    ports:
+      - 8090:8090
+    depends_on:
+      - rabbitmq
+      - celery-worker
+      - celery-beat
+
+  rabbitmq:
+    image: rabbitmq:3.7.26
+
+  celery-worker: &celery-worker
+    <<: *emailservice
+    command: celery -A EmailService worker --loglevel=info --concurrency=4
+    ports: []
+    depends_on:
+      - rabbitmq
+
+  celery-beat:
+    <<: *celery-worker
+    command: celery beat -A EmailService --loglevel=info --pidfile=/dev/shm/celery_beat.pid
+    ports: []
+    depends_on:
+      - celery-worker

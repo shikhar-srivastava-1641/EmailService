@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Send Email{% endblock %}
+
+{% block content %}
+<div id="headings">
+    <span><img id="email-icon" src="{% static 'images/email-icon5.png' %}" height="45px" width="45px"></span>
+    <span>Email Service</span>
+</div>
+
+<form id="email-form" action="/send-email/" method="POST" enctype="multipart/form-data">
+
+    <div id="form-heading">Type your E-mail :) </div>
+    <div id="lft-form">
+        <input id="form-subject" type="text" name="subject" placeholder="Enter subject"><br>
+        <textarea id="form-body" name="body" rows="15" cols="80" placeholder="Type your message here"></textarea><br>
+    </div>
+
+    <div id="rt-form">
+        <input id="form-from" type="text" name="from" placeholder="From..."><br>
+        <input id="form-to" type="text" name="to" placeholder="To..."><br>
+        <input id="form-cc" type="text" name="cc" placeholder="Cc..."><br>
+        <input id="form-bcc" type="text" name="bcc" placeholder="Bcc..."><br>
+        <input id="form-file" type="file" name="file" placeholder="Attach a file"><br>
+        <input id="form-submit" type="submit" name="send" value="Send">
+    </div>
+
+    {% if show_alert == 'True' %}
+        {% if success == 'True' %}
+            <script>alert("Email has been send successfully!!")</script>
+        {% else %}
+            <script>alert("Some error occurred. Please try again")</script>
+        {% endif %}
+    {% endif %}
+
+
+</form>
+{% endblock %}

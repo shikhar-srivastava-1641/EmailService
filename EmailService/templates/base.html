@@ -1,0 +1,18 @@
+{% load static %}
+{% csrf_token %}
+
+<html>
+
+<head>
+    <title>{% block title %}Title{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+</head>
+
+<body>
+{% block content %}
+{% endblock %}
+
+<!--<script src="{% static 'scripts/script.js' %}"></script>-->
+</body>
+
+</html>
