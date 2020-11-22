@@ -11,11 +11,16 @@ class Logger(object):
 
         formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
 
+        # file_handler = logging.FileHandler('email_service.log')
+        # file_handler.setLevel(logging.DEBUG)
+        # file_handler.setFormatter(formatter)
+        # self.logger.addHandler(file_handler)
+
         stream_handler = logging.StreamHandler()
         stream_handler.setLevel(logging.DEBUG)
         stream_handler.setFormatter(formatter)
-
         self.logger.addHandler(stream_handler)
+
         self.__log_map = self.__get_log_map()
 
     def __get_log_map(self):
