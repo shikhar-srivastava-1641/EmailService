@@ -22,11 +22,12 @@ pandas==1.1.4
 ```
 ##
 
+#### Steps Involved:
+
 The complete project is dockerized and one just need
 to run the docker-compose command to make the service
 up and running.
 
-#### Steps Involved:
 1. Cloning the repository
 
     ```bash
@@ -47,5 +48,6 @@ http://localhost:8090/
     ```bash
     docker-compose up
     ```
-    
-[previous page](../README.md)
+##
+###### [previous page](../README.md)
+###
