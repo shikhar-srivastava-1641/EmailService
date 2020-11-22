@@ -126,6 +126,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR + "/static"),
 )
 
+EMAIL_ID = os.getenv('EMAIL_ID')
 EMAIL_PASS = os.getenv('EMAIL_PASS')
 
 REST_FRAMEWORK = {

@@ -9,7 +9,7 @@ class Logger(object):
         self.logger = logging.getLogger(name)
         self.logger.setLevel(logging.DEBUG)
 
-        formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
+        formatter = logging.Formatter('%(asctime)s: %(levelname)s %(name)s:%(message)s')
 
         # file_handler = logging.FileHandler('email_service.log')
         # file_handler.setLevel(logging.DEBUG)

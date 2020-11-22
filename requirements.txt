@@ -3,5 +3,5 @@ djangorestframework==3.8.2
 requests==2.18.1
 aiosmtplib==1.1.4
 celery==4.2.1
-gevent==20.9.0
 ipython==7.16.1
+pandas==1.1.4
