@@ -14,7 +14,7 @@ Currently the service support 3 flows.
     * **Subject**: Subject of the email
     * **Body**: In the large textarea the user and write
     the body of the email
-    * Attach File: User can also attach any file to the
+    * **Attach File**: User can also attach any file to the
     mail 
 
 2. **Sending emails via csv file through API call.**
