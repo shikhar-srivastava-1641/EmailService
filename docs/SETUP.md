@@ -3,12 +3,12 @@
 These instructions assume that the service will be 
 running on MAC OS as the host operating system. 
 
-####Prerequisites for the project:
+#### Prerequisites for the project:
 * Python:~ v3.6
 * Docker:~ v19.03.13
 * docker-compose:~ v1.27.4
 ##
-####Dependencies
+#### Dependencies
 All the dependencies that are required for the email
 service to run:
 ```text
@@ -26,11 +26,11 @@ The complete project is dockerized and one just need
 to run the docker-compose command to make the service
 up and running.
 
-####Steps Involved:
+#### Steps Involved:
 1. Cloning the repository
 
     ```bash
-    cd ~
+    cd ~/<your_directory>/
     git clone https://github.com/shikhar-srivastava-1641/EmailService.git
     ``` 
 
