@@ -44,19 +44,19 @@ the emails getting sent every 30 minutes.
     involved are:
     
     * Getting inside the docker
-    ```dockerfile
+    ```text
     docker-compose exec email_service /bin/bash
     ```
     
-    * Run the superuser command. Enter username, email and
-    password.
+    * Run the superuser command. Enter your username, 
+    email and password.
     ```bash
     python manage.py createsuperuser
     ```
 
 
 ##
-#####Limitations: 
+##### Limitations: 
 * Currently, in the from input box we can only specify
 `test.testing.1150@gmail.com` as the default email-id
 
