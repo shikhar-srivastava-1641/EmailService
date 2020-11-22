@@ -4,8 +4,9 @@ from django.contrib.auth.models import User
 from EmailService.apis.send_mail import SendMail
 from EmailService.utils.email_utils import EmailUtils
 from EmailService.utils.logger import Logger
+from django.conf import settings
 
-TEST_EMAIL_ID = "test.testing.1150@gmail.com"
+TEST_EMAIL_ID = settings.EMAIL_ID
 logger = Logger(__name__)
 
 

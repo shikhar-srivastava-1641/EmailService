@@ -18,9 +18,11 @@ from django.urls import path
 
 from . import views
 from .apis.send_mail import SendMail
+from .apis.send_mail_csv import SendMailCSV
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.email_sender, name="email_sender"),
-    path('send-email/', SendMail.as_view(), name="send_email")
+    path('send-email/', SendMail.as_view(), name="send_email"),
+    path('send-email-csv/', SendMailCSV.as_view(), name="send_email_csv")
 ]
