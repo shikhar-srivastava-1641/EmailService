@@ -14,6 +14,7 @@ class EmailUtils:
         email_counts = emails.count()
 
         message = F"Total emails received in past {duration_in_min}mins: {email_counts}\n\n"
+
         message += "\n\n".join(
             [F"From: {email.sender}\n"
              F"To: {email.receivers}\n"
