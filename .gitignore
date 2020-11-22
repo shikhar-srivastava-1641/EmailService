@@ -135,3 +135,6 @@ dmypy.json
 
 # Pycharm files
 .idea/
+
+# Ignore dirs
+*/static/uploaded_files/
