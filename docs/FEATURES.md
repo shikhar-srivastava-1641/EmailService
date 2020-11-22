@@ -61,3 +61,7 @@ the emails getting sent every 30 minutes.
 `test.testing.1150@gmail.com` as the default email-id
 
 ##
+
+[previous page](../README.md)
+
+###
